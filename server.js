@@ -32,7 +32,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('/api/form', (req, res) => {
-    User.find().limit(5).sort({ _id: -1 }).then((data) => {
+    User.find({}).sort({ _id: -1 }).limit(5).then((data) => {
         res.send(data);
     });
 })
